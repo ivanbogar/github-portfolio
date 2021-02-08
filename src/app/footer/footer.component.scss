@@ -1,0 +1,16 @@
+// @include media-breakpoint-up(sm){
+//     .social-icons {
+//         text-align: center;
+//     }
+// }
+.social-icons {
+    text-align: right !important;
+}
+.mail-icon {
+    text-align: left !important;
+}
+@media only screen and (max-width: 768px) {
+    .social-icons, .mail-icon {
+        text-align: center !important;
+    }
+}

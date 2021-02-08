@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gitfolio';
+  title = 'Ivan Bogar - UX/UI Designer: Portfolio 2021';
 }

@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    font-size: 1.125em;
+}
+.section-title{    
+    letter-spacing: -0.063em;
+    margin-bottom: 1.5em;
+    font-size: 3em;
+}
+
+.divider{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: url(assets/images/divider.svg) no-repeat center;
+    background-size: 170px 4px;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+$black: #252A26 !default;
+$gray-500: #B8B8B8 !default;
+$red: #E8193E !default;
+$blue: #052fad !default;
+
+$primary: $black !default;
+$secondary: $gray-500 !default;
+$info: $blue !default;
+$border-width: 0px !default;
+
+$badge-font-size:                   1rem !default;
+$badge-font-weight:                 400 !default;
+$badge-padding-y:                   .5em !default;
+$badge-padding-x:                   1em !default;
+
+@import "~bootstrap/scss/bootstrap";
