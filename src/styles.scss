@@ -1,69 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-* {
-    font-family: 'Open Sans', sans-serif;
+* { font-family: 'Open Sans', sans-serif; }
+p { font-size: 1.125em; }
+h1 { letter-spacing: -0.063em; }
+
+///// Variables /////
+
+$black: #252A26 !default;
+$gray-500: #B8B8B8 !default;
+$red: #D6042E !default;
+$blue: #006699 !default;
+$white: #fff !default;
+
+$primary: $black !default;
+$secondary: $gray-500 !default;
+$info: $blue !default;
+$border-width: 0px !default;
+
+.logo {
+    display: inline-block;
+    width: 178px;
+    height: 38px;
+    background: $black;
+    mask-size: cover;
 }
-p{
-    font-size: 1.125em;
+.logo-ivan {
+    mask: url(assets/images/logo.svg);
 }
-h1 {
-    letter-spacing: -0.063em;
-}
-.section-title{    
-    letter-spacing: -0.063em;
-    margin-bottom: 1.5em;
-    font-size: 3em;
+.logo-ivan-min {
+    mask: url(assets/images/logo-min.svg);
 }
 
-body.light-theme{
+.icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: $black;
+    mask-size: cover;
+}
+.icon-bars {
+    mask: url(assets/images/icons/icon-bars.svg);
+}
+.icon-mail {
+    mask: url(assets/images/icons/icon-mail.svg);
+}
+.icon-linkedin {
+    mask: url(assets/images/icons/icon-linkedin.svg);
+}
+.icon-behance {
+    mask: url(assets/images/icons/icon-behance.svg);
+}
+.icon-github {
+    mask: url(assets/images/icons/icon-github.svg);
+}
+.icon-instagram {
+    mask: url(assets/images/icons/icon-instagram.svg);
+}
+.icon-twitter {
+    mask: url(assets/images/icons/icon-twitter.svg);
+}
 
-    .divider{
-        display: block;
-        width: 100%;
-        height: 4px;
-        background: url(assets/images/divider.svg) no-repeat center;
-        background-size: 170px 4px;
-        margin-top: 5em;
-        margin-bottom: 5em;
-    }
+///// Style Theme LIGHT - Default /////
 
-    $black: #252A26 !default;
-    $gray-500: #B8B8B8 !default;
-    $red: #E8193E !default;
-    $blue: #052fad !default;
-    $white: #fff !default;
-
-    $primary: $black !default;
-    $secondary: $gray-500 !default;
-    $info: $blue !default;
-    $border-width: 0px !default;
-
-    $badge-font-size:                   1rem !default;
-    $badge-font-weight:                 400 !default;
-    $badge-padding-y:                   .5em !default;
-    $badge-padding-x:                   1em !default;
-
+.bootstrap {
+    color: $black !important;
     background-color: $white;
     
-    a{
-        color: $black;
+    .text-info {
+        color: $white !important;
+        background-color: $blue;
+        padding: 1px 4px;
     }
-    .navbar{
 
+    button:focus{
+        outline: none;
+    }
+
+    .navbar {
         background-color: $white;
-        .navbar-toggler{
-            padding-top: 1em;
+
+        a.navbar-brand {
+            letter-spacing: -0.063em;
+
+                .ivan{
+                    font-size: 1.5em;
+                    font-weight: 400;
+                    color: $black;
+                }
+                .bogar{
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    color: $black;
+                }
+                .uiux {
+                    font-size: 1em;
+                    color: $gray-500;
+                    margin-left: 0.5em ;
+                }
         }
-        .navbar-toggler:focus{
+
+    
+        .navbar-toggler {
+            padding: 0;
+
+            .navbar-toggler-icon {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .navbar-toggler:focus {
             box-shadow: none;
         }
+        .nav-link {
+            color: $black;
+            //display: inline;
+        }
     }
 
-@import "~bootstrap/scss/bootstrap";
+    .oval {
+        background-color: transparent;
+    }
+      
+    .ovalSelected {
+        background: $black;
+    }
+    
+    .buttonSelected {
+        background-color: $white;
+    }
 
-}
-body.dark-theme{
+    span.text-danger{ color: $red !important; }
 
     .divider{
         display: block;
@@ -75,39 +142,128 @@ body.dark-theme{
         margin-bottom: 5em;
     }
 
-    $black: #252A26 !default;
-    $gray-500: #B8B8B8 !default;
-    $red: #E8193E !default;
-    $blue: #052fad !default;
-    $white: #fff !default;
-
-    $primary: $white !default;
-    $secondary: $gray-500 !default;
-    $info: $blue !default;
-    $border-width: 0px !default;
-
-    $badge-font-size:                   1rem !default;
-    $badge-font-weight:                 400 !default;
-    $badge-padding-y:                   .5em !default;
-    $badge-padding-x:                   1em !default;
-
-    background-color: $black;
-    color: $white;
-    
-    a{
-        color: $white;
-    }
-    .navbar{
-
-        background-color: $black;
-        .navbar-toggler{
-            padding-top: 1em;
+    .card{
+        border: none;
+        background: none;
+        .card-body {
+            padding: 1em 0;
+            color: $black;
+            
+            .card-title{
+                letter-spacing: -0.063em;
+            }
+            .badge{
+                padding: 1em;
+            }
         }
-        .navbar-toggler:focus{
+    }
+}
+
+///// Style Theme DARK - Default /////
+
+body.bootstrap-dark {
+    background-color: $black;
+    color: $white !important;
+
+    .text-info {
+        color: $blue !important;
+        background-color: $white;
+        padding: 1px 4px;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    .navbar {
+        background-color: $black;
+
+        a.navbar-brand {
+            letter-spacing: -0.063em;
+
+                .ivan{
+                    font-size: 1.5em;
+                    font-weight: 400;
+                    color: $white;
+                }
+                .bogar{
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    color: $white;
+                }
+                .uiux {
+                    font-size: 1em;
+                    color: $gray-500;
+                    margin-left: 0.5em ;
+                }
+        }
+
+        .navbar-toggler {
+            padding: 0;
+
+            .navbar-toggler-icon {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .navbar-toggler:focus {
             box-shadow: none;
         }
+        .nav-link {
+            color: $white;
+            //display: inline;
+        }
     }
 
-@import "~bootstrap/scss/bootstrap";
+    .oval {
+        background-color: $white;
+    }
+      
+    .ovalSelected {
+        background: transparent;
+    }
+    
+    .buttonSelected {
+        background-color:transparent;
+    }
 
+    .divider{
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: url(assets/images/divider_w.svg) no-repeat center;
+        background-size: 170px 4px;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        
+    }  
+
+    span.text-danger{ color: $red !important; }
+    
+    .logo {
+        background: $white;
+    }
+    .icon {
+        background: $white;
+    }
+
+    .card {
+        border: none;
+        background: none;
+
+        .card-body {
+            padding: 1em 0;
+            color: $white;
+            
+            .card-title{
+                letter-spacing: -0.063em;
+            }
+
+            .badge{
+                padding: 1em;
+            }
+        }
+    }
 }
+
+@import "~bootstrap/scss/bootstrap";

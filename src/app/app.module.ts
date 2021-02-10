@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     LandingComponent,
     WorksComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ThemeToggleComponent
   ],
   imports: [
     BrowserModule,
