@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ThemeService } from './services/theme.service';
+import { ThemeService } from './components/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,12 @@ import { ThemeService } from './services/theme.service';
 export class AppComponent implements OnInit{
 
   constructor (private themeService: ThemeService, private renderer: Renderer2) {}
+
+  navbarOpen = false;
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 
   ngOnInit(): void {
     this.themeService.themeChanges().subscribe(theme => {
