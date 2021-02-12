@@ -1,27 +1,29 @@
+<div id="top"></div>
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" (click)="onClick('top')">
             <span class="ivan">Ivan</span><span class="bogar">Bogar</span> <span class="uiux">UI/UX</span>
-            <app-theme-toggle></app-theme-toggle>
-          </a>
+        </a>
+        <app-theme-toggle></app-theme-toggle>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
-                <span class="icon icon-bars"></span> 
+                <span class="icon icon-bars"></span>
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto list-group list-group-horizontal justify-content-center">
                 <li class="nav-item px-3">
-                    <a class="nav-link font-weight-bold" href="#">WORKS</a>
+                    <a class="nav-link font-weight-bold" (click)="onClick('works')">WORKS</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link font-weight-bold" href="#">ABOUT ME</a>
+                    <a class="nav-link font-weight-bold" (click)="onClick('about')">ABOUT ME</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link font-weight-bold" href="#">CONTACT</a>
+                    <a class="nav-link font-weight-bold" (click)="onClick('contact')">CONTACT</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<a class="button" (click)="onClick('top')"><span class="float float-icon"></span></a>

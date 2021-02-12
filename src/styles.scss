@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * { font-family: 'Open Sans', sans-serif; }
-p { font-size: 1.125em; }
+p { font-size: 1em; }
 h1 { letter-spacing: -0.063em; }
+a { cursor: pointer; }
 
 ///// Variables /////
 
-$black: #252A26 !default;
+$black: #182028 !default;
 $gray-500: #B8B8B8 !default;
-$red: #D6042E !default;
+//$red: #D6042E !default;
+$red: #F84E59 !default;
 $blue: #006699 !default;
 $white: #fff !default;
 
@@ -17,19 +19,43 @@ $primary: $black !default;
 $secondary: $gray-500 !default;
 $info: $blue !default;
 $border-width: 0px !default;
+$zindex-fixed: 1030 !default;
 
-.logo {
-    display: inline-block;
-    width: 178px;
-    height: 38px;
-    background: $black;
+///// Style Theme COMON - Default /////
+
+.card {
+    border: none !important;
+    background: transparent !important;
+    
+    .card-img, .card-img-top{
+        border-radius: 0;
+    }
+
+    .card-body {
+        padding: 1em 0;
+        
+        .card-title{
+            letter-spacing: -0.063em;
+        }
+    }
+}
+
+.badge{
+    padding: 0.75em !important;
+    font-weight: 400 !important;
+}
+.float{
+	position:fixed;
+	width:48px;
+	height:48px;
+	bottom:16px;
+	right:16px;
+	background: $black;
     mask-size: cover;
+    z-index: $zindex-fixed;
 }
-.logo-ivan {
-    mask: url(assets/images/logo.svg);
-}
-.logo-ivan-min {
-    mask: url(assets/images/logo-min.svg);
+.float-icon{
+	mask: url(assets/images/icons/icon-arrow-up.svg);
 }
 
 .icon {
@@ -42,7 +68,7 @@ $border-width: 0px !default;
 .icon-bars {
     mask: url(assets/images/icons/icon-bars.svg);
 }
-.icon-mail {
+.icon-envelope {
     mask: url(assets/images/icons/icon-mail.svg);
 }
 .icon-linkedin {
@@ -75,6 +101,14 @@ $border-width: 0px !default;
 
     button:focus{
         outline: none;
+    }
+
+    .bg-danger{
+        background-color: $red !important;
+    }
+    .bg-primary{
+        background-color: $black !important;
+        color: $white;
     }
 
     .navbar {
@@ -117,10 +151,6 @@ $border-width: 0px !default;
             //display: inline;
         }
     }
-
-    .oval {
-        background-color: transparent;
-    }
       
     .ovalSelected {
         background: $black;
@@ -143,18 +173,8 @@ $border-width: 0px !default;
     }
 
     .card{
-        border: none;
-        background: none;
         .card-body {
-            padding: 1em 0;
             color: $black;
-            
-            .card-title{
-                letter-spacing: -0.063em;
-            }
-            .badge{
-                padding: 1em;
-            }
         }
     }
 }
@@ -173,6 +193,14 @@ body.bootstrap-dark {
 
     button:focus{
         outline: none;
+    }
+
+    .bg-danger{
+        background-color: $red !important;
+    }
+    .bg-primary{
+        background-color: $white !important;
+        color: $black;
     }
 
     .navbar {
@@ -240,28 +268,13 @@ body.bootstrap-dark {
 
     span.text-danger{ color: $red !important; }
     
-    .logo {
-        background: $white;
-    }
-    .icon {
+    .logo, .icon, .float {
         background: $white;
     }
 
-    .card {
-        border: none;
-        background: none;
-
+    .card{
         .card-body {
-            padding: 1em 0;
             color: $white;
-            
-            .card-title{
-                letter-spacing: -0.063em;
-            }
-
-            .badge{
-                padding: 1em;
-            }
         }
     }
 }
