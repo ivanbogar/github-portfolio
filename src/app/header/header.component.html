@@ -1,7 +1,7 @@
 <div id="top"></div>
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" (click)="onClick('top')">
+        <a class="navbar-brand" routerLink="" (click)="onClick('top')">
             <span class="ivan">Ivan</span><span class="bogar">Bogar</span> <span class="uiux">UI/UX</span>
         </a>
         <app-theme-toggle></app-theme-toggle>
@@ -14,10 +14,11 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto list-group list-group-horizontal justify-content-center">
                 <li class="nav-item px-3">
-                    <a class="nav-link font-weight-bold" (click)="onClick('works')">WORKS</a>
+                    <a class="nav-link font-weight-bold" routerLink="home" (click)="onClick('works')">WORKS</a>
+                    <!-- <a class="nav-link font-weight-bold" routerLink="home" fragment="works">WORKS</a> -->
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link font-weight-bold" (click)="onClick('about')">ABOUT ME</a>
+                    <a class="nav-link font-weight-bold" routerLink="home" (click)="onClick('about')">ABOUT ME</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link font-weight-bold" (click)="onClick('contact')">CONTACT</a>

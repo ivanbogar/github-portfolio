@@ -1,20 +1,28 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
+import { slideInAnimation } from './animations';
+import { RouterOutlet } from '@angular/router';
 import { ThemeService } from './components/services/theme.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [ slideInAnimation ]
 })
-export class AppComponent implements OnInit{
-
-  constructor (private themeService: ThemeService, private renderer: Renderer2) {}
+export class AppComponent {
+  //title = 'angular-routing';
 
   navbarOpen = false;
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
+
+  getAnimationData(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
+
+  constructor (private themeService: ThemeService, private renderer: Renderer2) {}
 
   ngOnInit(): void {
     this.themeService.themeChanges().subscribe(theme => {
@@ -24,5 +32,4 @@ export class AppComponent implements OnInit{
       this.renderer.addClass(document.body, theme.newValue);
     })
   }
-
 }
