@@ -1,0 +1,10 @@
+<app-hero></app-hero>
+<p>articles works!</p>
+
+<ul class="list-group">
+    <li *ngFor="let p of products" class="list-group-item">
+      <a (click)="gotoDetails(p.id)" routerLinkActive="active">{{p.prodName}}</a>
+    </li>
+  </ul>
+<!-- <a (click)="gotoDetails(article.id)" class="btn btn-success btn-lg">Show Details</a> -->
+<app-footer></app-footer>
