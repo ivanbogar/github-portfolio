@@ -1,1 +1,360 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap');
+
+///// Variables /////
+
+$black: #182028 !default;
+$gray-500: #B8B8B8 !default;
+$gray-600: #6c757d !default;
+//$red: #D6042E !default;
+$red: #D6042E !default;
+$blue: #006699 !default;
+$yellow: #ffc107 !default;
+$white: #fff !default;
+
+$primary: $black !default;
+$secondary: $gray-500 !default;
+$info: $blue !default;
+$border-width: 0px !default;
+$zindex-fixed: 1030 !default;
+
+$font-weight-bolder: 900 !default;
+
+* { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif;}
+h1 { letter-spacing: -0.063em; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { font-family: 'Open Sans', sans-serif;}
+p { font-size: 1em; line-height: 1.5em;}
+//h1, h2, h3 { letter-spacing: -0.031em; }
+//h4, h5, h6 { letter-spacing: -0.025em; }
+a { 
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+.btn{
+    border-radius: 0 !important;
+    text-transform: uppercase;
+}
+.btn-primary{
+    padding: 1em 1.125em 0.875em !important;
+}
+///// Style Theme COMON - Default /////
+
+.navbar {
+
+    a.navbar-brand {
+        letter-spacing: -0.063em;
+
+            .ivan{
+                font-size: 1.5em;
+                font-weight: 400;
+            }
+            .bogar{
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+    }
+    .nav-link {
+        font-size: 1em;
+        letter-spacing: -0.063em;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+        margin: 0;
+
+        .navbar-toggler-icon {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.divider{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-size: 88px 4px;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.badge{
+    padding: 0.75em !important;
+    font-weight: 400 !important;
+}
+.float{
+	position:fixed;
+	width:44px;
+	height:44px;
+	bottom:16px;
+	right:16px;
+	background: $black;
+    mask-size: cover;
+    z-index: $zindex-fixed;
+}
+.float-icon{
+	mask: url(assets/images/icons/icon-arrow-up.svg);
+}
+
+.icon-44, .icon-16, .logo {
+    display: inline-block;
+    background: $black;
+    mask-size: cover;
+}
+.icon-44:hover, .icon-16:hover, .float:hover {
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    background: $red;
+}
+
+.icon-44{
+    width: 44px;
+    height: 44px;
+}
+.icon-16{
+    width: 16px;
+    height: 16px;
+}
+.logo {
+    width: 48px;
+    height: 48px;
+}
+.icon-bars {
+    mask: url(assets/images/icons/icon-bars.svg);
+}
+.icon-back {
+    mask: url(assets/images/icons/icon-back.svg);
+}
+.icon-close {
+    mask: url(assets/images/icons/icon-close.svg);
+}
+.icon-link {
+    mask: url(assets/images/icons/icon-link.svg);
+}
+.icon-envelope {
+    mask: url(assets/images/icons/icon-mail.svg);
+}
+.icon-linkedin {
+    mask: url(assets/images/icons/icon-linkedin.svg);
+}
+.icon-dribbble {
+    mask: url(assets/images/icons/icon-dribbble.svg);
+}
+.icon-behance {
+    mask: url(assets/images/icons/icon-behance.svg);
+}
+.icon-github {
+    mask: url(assets/images/icons/icon-github.svg);
+}
+.icon-instagram {
+    mask: url(assets/images/icons/icon-instagram.svg);
+}
+.icon-twitter {
+    mask: url(assets/images/icons/icon-twitter.svg);
+}
+.icon-logo {
+    mask: url(assets/images/logo-square.svg);
+}
+.icon-dlogo {
+    mask: url(assets/images/logo-dsquare.svg);
+}
+
+
+///// Style Theme LIGHT - Default /////
+
+.bootstrap {
+    color: $black !important;
+    background-color: $white;
+
+    a{
+        color: $black;
+        text-decoration: none;
+
+    }
+    a:hover{
+        color: $red;
+        text-decoration: none;
+    }
+    
+    .text-info {
+        color: $white !important;
+        background-color: $blue;
+        padding: 1px 4px;
+    }
+
+    .bg-danger{
+        background-color: $red !important;
+    }
+    .bg-primary{
+        background-color: $black !important;
+        color: $white;
+    }
+
+    .navbar {
+        background-color: rgba($color: $white, $alpha: 0.95);
+
+        a.navbar-brand {
+            color: $black;
+
+            // .ivan{
+            //     color: $gray-500;
+            // }
+            // .bogar{
+            //     color: $black;
+            // }
+        }
+        a.navbar-brand:hover{
+            color: $gray-600;
+        }
+        .nav-link {
+            color: $black;
+
+        }
+        .nav-link:hover{
+            color: $red;
+        }
+    }
+      
+    .ovalSelected {
+        background: $black;
+        mask: url(assets/images/icons/icon-light_on.svg);
+    }
+    
+    .buttonSelected {
+        background-color: $white;
+    }
+
+    span.text-danger{ color: $red !important; }
+
+    .divider{
+        background: url(assets/images/divider.svg) no-repeat center;
+    }
+}
+
+///// Style Theme DARK - Default /////
+
+body.bootstrap-dark {
+    background-color: $black;
+    color: $white !important;
+
+    a{
+        color: $white;
+        text-decoration: none;
+
+    }
+    a:hover{
+        color: $yellow;
+        text-decoration: none;
+    }
+
+    .text-info {
+        color: $blue !important;
+        background-color: $white;
+        padding: 1px 4px;
+    }
+
+    .bg-danger{
+        background-color: $yellow !important;
+    }
+    .bg-primary{
+        background-color: $white !important;
+        color: $black;
+    }
+
+    .navbar {
+        background-color: rgba($color: $black, $alpha: 0.95);
+
+        a.navbar-brand {
+            color: $white;
+                
+                // .ivan {
+                //     color: $gray-500;
+                // }
+                // .bogar {
+                //     color: $white;
+                // }
+        }
+        a.navbar-brand:hover{
+            color: $yellow;
+        }
+        .nav-link {
+            color: $white;
+        }
+        .nav-link:hover{
+            color: $yellow;
+        }
+    }
+
+    /* menu icon */
+  
+  .navbar-toggler-icon .menu-icon .navicon {
+    background: $white !important;
+    }
+    
+    .navbar-toggler-icon .menu-icon .navicon:before,
+    .navbar-toggler-icon .menu-icon .navicon:after {
+    background: $white !important;
+  
+    }
+    
+    /* menu btn */
+    
+    .navbar-toggler-icon .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent !important;
+    }
+    
+    .navbar-toggler-icon .menu-btn:checked ~ .menu-icon .navicon:before {
+    background: $yellow !important;
+    }
+    
+    .navbar-toggler-icon .menu-btn:checked ~ .menu-icon .navicon:after {
+    background: $yellow !important;
+    }
+    
+    .navbar-toggler-icon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .navbar-toggler-icon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    background: $yellow !important;
+    }
+
+    .oval {
+        background-color: $yellow;
+        mask: url(assets/images/icons/icon-light_off.svg);
+    }
+    
+    .buttonSelected {
+        background-color:transparent;
+    }
+
+    .divider{
+        background: url(assets/images/divider_w.svg) no-repeat center;        
+    }  
+
+    span.text-danger{ color: $yellow !important; }
+    
+    .logo, .icon-16, .icon-44, .float {
+        background: $white;
+    }
+
+    .icon-44:hover, .icon-16:hover, .float:hover {
+        transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+        background: $yellow;
+    }
+
+}
+
+@import "~bootstrap/scss/bootstrap";

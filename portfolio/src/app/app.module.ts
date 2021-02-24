@@ -8,12 +8,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorksModule } from './home/works.module';
+import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
+import { HeaderComponent } from './header/header.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SplashScreenComponent,
+    HeaderComponent,
+    ThemeToggleComponent
   ],
   imports: [
     BrowserModule,

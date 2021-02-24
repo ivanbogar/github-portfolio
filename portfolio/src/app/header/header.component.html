@@ -1,1 +1,33 @@
-<p>header works!</p>
+
+<div class="container-xxl">
+    <nav class="navbar navbar-expand-sm px-0 pt-0">
+        <a class="navbar-brand align-self-start mt-3" routerLink="" (click)="onClick('top')">
+            <span class="logo icon-logo"></span>
+            <!-- <span class="ivan">Ivan</span><span class="bogar">Bogar</span> -->
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon mt-1" for="menu-btn"><span class="navicon"></span></label>
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse pt-3 pb-3 align-self-end" id="navbarNav">
+            <ul class="navbar-nav ml-auto list-group list-group-horizontal justify-content-center menu">
+                <li class="nav-item pl-3">
+                    <a class="nav-link font-weight-bold mt-2" routerLink="home" (click)="onClick('works')">WORK</a>
+                </li>
+                <li class="nav-item pl-4">
+                    <a class="nav-link font-weight-bold mt-2" routerLink="about" (click)="onClick('top')">ABOUT</a>
+                </li>
+                <li class="nav-item pl-4">
+                    <a class="nav-link px-0"><app-theme-toggle></app-theme-toggle></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<a class="button" (click)="onClick('top')"><span class="float float-icon"></span></a>

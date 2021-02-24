@@ -1,5 +1,32 @@
-<h1>The Details of Article with an ID: {{id}}</h1>
-<h1>{{product.prodName}}</h1>
-<h3>{{product.prodDesc}}</h3>
-<h2>{{product.prodPrice}}</h2>
+<div class="container-xxl">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-md-12">
+            <div class="d-flex bd-highlight">
+                <div class="p-0 w-100 bd-highlight"><p class="fw-bold text-danger mb-0">{{work.prodCategory}}</p>
+                    <h1 class="p-0 d-flex justify-content-start fw-bold mb-5">{{work.prodName}}</h1></div>
+                <div class="p-0 flex-shrink-1 bd-highlight"><a class="d-flex justify-content-end" routerLink="/home" (click)="onClick('works')"><span class="icon-44 icon-close"></span></a> </div>
+              </div>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col">
+            <p [innerHTML]="work.prodDescFull"></p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-3 col-sm-12 mb-4">
+            <h4 class="fw-bold mb-2">Role:</h4>
+            <p>{{work.prodRole}}</p>
+        </div>
+        <div class="col-md-3 col-sm-12 mb-4">
+            <h4 class="fw-bold mb-2">Client:</h4>
+            <p>{{work.prodClient}}</p>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-4">
+            <h4 class="fw-bold mb-2">Tools:</h4>
+            <p>{{work.prodTools}}</p>
+        </div>
+    </div>
+    <div class="px-0" [innerHTML]="work.prodContent"></div>
+</div>
 <app-footer></app-footer>

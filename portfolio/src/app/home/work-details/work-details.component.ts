@@ -1,5 +1,23 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import worksData from '../works.json';
+
+
+interface Works {
+  id: Number;
+  prodTheme: String;
+  imageUrl: String;
+  prodCategory: String;
+  prodName: String;
+  prodDesc: String;
+  prodDescFull: String;
+  prodRole: String;
+  prodClient: String;
+  prodTools: String;
+  prodContent: String;
+}
 
 @Component({
   selector: 'app-work-details',
@@ -8,40 +26,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WorkDetailsComponent implements OnInit {
 
-  products = [
-    {
-      id: 10,
-      prodName: 'iPhone X',
-      prodDesc: 'New iPhone X with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 989
-    },
-    {
-      id: 11,
-      prodName: 'Pixel 2 XL',
-      prodDesc: 'New Google Pixel 2 XL with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 788
-    },
-    {
-      id: 12,
-      prodName: 'Samsung S10',
-      prodDesc: 'New Samsung S10 with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 989
-    }
-  ];
-  product: any;
+  works: Works[] = worksData;
+  
+  work: any;
   id: any;
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller) {
    this.id = this.activatedRoute.snapshot.params.id;
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
-    console.log(this.product);
-    this.product = this.products.find(x => x.id === parseInt(this.id));
-    console.log(this.product);
+    console.log(this.work);
+    this.work = this.works.find(x => x.id === parseInt(this.id));
+    console.log(this.work);
   }
 
+  public onClick(elementId: string): void { 
+      this.viewportScroller.scrollToAnchor(elementId);
+  }
 }
 
 

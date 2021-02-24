@@ -1,10 +1,43 @@
 <app-hero></app-hero>
-<p>articles works!</p>
+<!-- <div id="works" class="container-fluid">
+  <div class="divider text-center"></div>
+  <h2 class="text-center fw-light mb-5">selected <span class="text-danger fw-bold">works</span></h2>
+  <div class="row row-cols-1 g-0">
+    <div class="col px-0 mb-4" *ngFor="let w of works">
+      <div class="card">
+        <a (click)="gotoDetails(w.id)" routerLinkActive="active" (click)="onClick('top')"><img class="card-img-top" src="{{w.imageUrl}}"
+            alt="{{w.prodName}}"></a>
+        <div class="card-body">
+          <span class="text-danger">{{w.prodCategory}}</span>
+          <h4 class="card-title fw-light">{{w.prodName}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div id="works" class="container-fluid">
 
-<ul class="list-group">
-    <li *ngFor="let p of products" class="list-group-item">
-      <a (click)="gotoDetails(p.id)" routerLinkActive="active">{{p.prodName}}</a>
-    </li>
-  </ul>
-<!-- <a (click)="gotoDetails(article.id)" class="btn btn-success btn-lg">Show Details</a> -->
+  <div class="divider text-center"></div>
+
+  <h2 class="text-center fw-light mb-5">selected <span class="text-danger fw-bold">works</span></h2>
+
+  <div class="row row-cols-1 g-0">
+    <div class="col mb-5" *ngFor="let w of works">
+      <div class="card {{w.prodTheme}}" style="background: url({{w.imageUrl}});">
+        <div class="card-body">
+          <h5 class="card-title fw-bold mb-5">{{w.prodClient}}</h5>
+          <h6 class="card-title fw-bold">{{w.prodCategory}}</h6>
+          <h1 class="card-title fw-light">{{w.prodName}}</h1>
+          <p class="mb-5">{{w.prodDesc}}</p>
+
+          <!-- <a class="button" (click)="gotoDetails(w.id)" routerLinkActive="active" (click)="onClick('top')">View Case</a> -->
+
+          <button type="button" class="btn btn-primary fw-bold" (click)="gotoDetails(w.id)" routerLinkActive="active" (click)="onClick('top')">View Case</button>
+        </div>
+        <!-- <img class="card-img-top" src="{{w.imageUrl}}" alt="{{w.prodName}}"> -->
+      </div>
+    </div>
+  </div>
+
+</div>
 <app-footer></app-footer>

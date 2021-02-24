@@ -1,0 +1,28 @@
+[
+    {
+      "id": 10,
+      "prodTheme": "dark",
+      "imageUrl": "../../assets/images/jobs/dow_ios_00.jpg",
+      "prodCategory": "Mobile",
+      "prodName": "Plataforma Linha Verde",
+      "prodDesc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...",
+      "prodDescFull": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p> <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>",
+      "prodRole": "UX Designer",
+      "prodClient": "Dow",
+      "prodTools": "Sketch, Adobe Photoshop",
+      "prodContent": "<div class='row mb-5'><div class='col-md-6 mb-4'><img class='img-fluid mx-auto d-block' src='../assets/images/jobs/job1.jpg' alt='IMAGE 1'></div> <div class='col-md-6 mb-4'><img class='img-fluid' src='../assets/images/jobs/job2.jpg' alt='IMAGE 2'></div></div>"
+    },
+    {
+      "id": 11,
+      "prodTheme": "light",
+      "imageUrl": "../../assets/images/jobs/closrly_01.jpg",
+      "prodCategory": "E-learning",
+      "prodName": "Plataforma Linha Verde",
+      "prodDesc": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae, totam rem aperiam, eaque...",
+      "prodDescFull": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae doloremque laudantium.",
+      "prodRole": "UX Designer",
+      "prodClient": "DiPiú",
+      "prodTools": "VS Code, Figma, Illustrator",
+      "prodContent": "<div class='row mb-5'><div class='col-md-6 mb-4'><img class='img-fluid mx-auto d-block' src='../assets/images/jobs/job1.jpg' alt='IMAGE 1'></div> <div class='col-md-6 mb-4'><img class='img-fluid' src='../assets/images/jobs/job2.jpg' alt='IMAGE 2'></div></div>"
+    }
+]

@@ -1,5 +1,23 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import worksData from '../works.json';
+
+
+interface Works {
+  id: Number;
+  prodTheme: String;
+  imageUrl: String;
+  prodCategory: String;
+  prodName: String;
+  prodDesc: String;
+  prodDescFull: String;
+  prodRole: String;
+  prodClient: String;
+  prodTools: String;
+  prodContent: String;
+}
 
 @Component({
   selector: 'app-works',
@@ -8,34 +26,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class WorksComponent implements OnInit {
 
-  products = [
-    {
-      id: 10,
-      prodName: 'iPhone X',
-      prodDesc: 'New iPhone X with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 989
-    },
-    {
-      id: 11,
-      prodName: 'Pixel 2 XL',
-      prodDesc: 'New Google Pixel 2 XL with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 788
-    },
-    {
-      id: 12,
-      prodName: 'Samsung S10',
-      prodDesc: 'New Samsung S10 with 5.5 inch screen, 256GB Internal Memory, 16GB RAM',
-      prodPrice: 989
-    }
-  ];
+  works: Works[] = worksData;
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private viewportScroller: ViewportScroller) { }
   
   ngOnInit() {
   }
 
   gotoDetails(workId: any) {
     this.router.navigate(['/work/', workId]);
+  }
+
+  public onClick(elementId: string): void { 
+      this.viewportScroller.scrollToAnchor(elementId);
   }
 
   // gotoDetails(id: any) {
