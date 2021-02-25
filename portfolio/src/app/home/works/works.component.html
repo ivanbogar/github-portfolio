@@ -1,20 +1,4 @@
 <app-hero></app-hero>
-<!-- <div id="works" class="container-fluid">
-  <div class="divider text-center"></div>
-  <h2 class="text-center fw-light mb-5">selected <span class="text-danger fw-bold">works</span></h2>
-  <div class="row row-cols-1 g-0">
-    <div class="col px-0 mb-4" *ngFor="let w of works">
-      <div class="card">
-        <a (click)="gotoDetails(w.id)" routerLinkActive="active" (click)="onClick('top')"><img class="card-img-top" src="{{w.imageUrl}}"
-            alt="{{w.prodName}}"></a>
-        <div class="card-body">
-          <span class="text-danger">{{w.prodCategory}}</span>
-          <h4 class="card-title fw-light">{{w.prodName}}</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div id="works" class="container-fluid">
 
   <div class="divider text-center"></div>
@@ -23,10 +7,10 @@
 
   <div class="row row-cols-1 g-0">
     <div class="col mb-5" *ngFor="let w of works">
-      <div class="card {{w.prodTheme}}" style="background: url({{w.imageUrl}});">
+      <div class="card {{w.prodTheme}} {{w.prodCapa}}">
         <div class="card-body">
-          <h5 class="card-title fw-bold mb-5">{{w.prodClient}}</h5>
-          <h6 class="card-title fw-bold">{{w.prodCategory}}</h6>
+          <h5 class="card-title fw-bold mb-5 pb-5">{{w.prodClient}}</h5>
+          <h6 class="card-title fw-bold pt-5">{{w.prodCategory}}</h6>
           <h1 class="card-title fw-light">{{w.prodName}}</h1>
           <p class="mb-5">{{w.prodDesc}}</p>
 

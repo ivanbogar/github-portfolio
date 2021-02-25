@@ -8,6 +8,7 @@ import worksData from '../works.json';
 interface Works {
   id: Number;
   prodTheme: String;
+  prodCapa: String;
   imageUrl: String;
   prodCategory: String;
   prodName: String;
