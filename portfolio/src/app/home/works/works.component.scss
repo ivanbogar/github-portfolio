@@ -15,7 +15,7 @@ $white: #ffffff !default;
 
 .card {
     border: none !important;
-    //background: transparent !important;
+    background-color: transparent !important;
     height: 690px;
     background-position: 50% 50%;
     background-repeat: no-repeat !important;
@@ -35,7 +35,7 @@ $white: #ffffff !default;
 }
 .card.dow{
     background-image: url(../../../assets/images/jobs/capa-dow.jpg);
-    background-position: 50% 50%;
+    //background-position: 50% 50%;
 }
 .card.closrly{
     background-image: url(../../../assets/images/jobs/capa-closrly.jpg);
@@ -47,7 +47,7 @@ $white: #ffffff !default;
     background-image: url(../../../assets/images/jobs/capa-dipiu.jpg);
 }
 .card.ibm{
-    background-image: url(../../../assets/images/jobs/capa-dow.jpg);
+    background-image: url(../../../assets/images/jobs/capa-ibmix.jpg);
 }
 .card.santander{
     background-image: url(../../../assets/images/jobs/capa-cepera.jpg);
@@ -86,6 +86,42 @@ $white: #ffffff !default;
     }
 }
 
+@media screen and (max-width: 579px){
+    .card {
+        .card-body {
+            padding: 1.5em 0;
+            position: relative;
+            top: 96px;
+            margin-left: 24px;
+            margin-top: -96px;
+            width: 270px;
+            }
+    }
+    .card.dow {
+        height: 610px;
+        background-position: 40% 50% !important;
+    }
+    .card.closrly {
+        height: 610px;
+        background-position: 30% 50% !important;
+    }
+    .card.cepera {
+        height: 610px;
+        background-position: 30% 50% !important;
+    }
+    .card.dipiu {
+        height: 610px;
+        background-position: 30% 50% !important;
+    }
+    .card.ibm {
+        height: 610px;
+        background-position: 35% 50% !important;
+    }
+    .card.santander {
+        height: 610px;
+        background-position: 55% 50% !important;
+    }
+}
 @media screen and (max-width: 479px){
     .card {
         .card-body {
@@ -99,23 +135,23 @@ $white: #ffffff !default;
     }
     .card.dow {
         height: 610px;
-        background-position: 55% 50% !important;
+        background-position: 40% 50% !important;
     }
     .card.closrly {
         height: 610px;
-        background-position: 40% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.cepera {
         height: 610px;
-        background-position: 42% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.dipiu {
         height: 610px;
-        background-position: 55% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.ibm {
         height: 610px;
-        background-position: 55% 50% !important;
+        background-position: 35% 50% !important;
     }
     .card.santander {
         height: 610px;
@@ -130,24 +166,24 @@ $white: #ffffff !default;
             top: 96px;
             margin-left: 24px;
             margin-top: -96px;
-            width: 270px;
+            width: 250px;
             }
     }
     .card.dow {
         height: 610px;
-        background-position: 45% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.closrly {
         height: 610px;
-        background-position: 45% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.cepera {
         height: 610px;
-        background-position: 34% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.dipiu {
         height: 610px;
-        background-position: 45% 50% !important;
+        background-position: 30% 50% !important;
     }
     .card.ibm {
         height: 610px;
