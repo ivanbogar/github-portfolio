@@ -82,5 +82,19 @@
     "prodClient": "Closrly",
     "prodTools": "VS Code, Figma, Illustrator",
     "prodContent": "<div class='row mb-5'><div class='col-md-6 mb-4'><img class='img-fluid mx-auto d-block' src='../assets/images/jobs/job1.jpg' alt='IMAGE 1'></div> <div class='col-md-6 mb-4'><img class='img-fluid' src='../assets/images/jobs/job2.jpg' alt='IMAGE 2'></div></div>"
+  },
+  {
+    "id": 19,
+    "prodTheme": "light",
+    "prodCapa": "rockout",
+    "imageUrl": "../../assets/images/jobs/capa-rockout.jpg",
+    "prodCategory": "Identity",
+    "prodName": "Rockout",
+    "prodDesc": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae, totam rem aperiam, eaque...",
+    "prodDescFull": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae doloremque laudantium.",
+    "prodRole": "UX Designer",
+    "prodClient": "Rockout",
+    "prodTools": "VS Code, Figma, Illustrator",
+    "prodContent": "<div class='row mb-5'><div class='col-md-6 mb-4'><img class='img-fluid mx-auto d-block' src='../assets/images/jobs/job1.jpg' alt='IMAGE 1'></div> <div class='col-md-6 mb-4'><img class='img-fluid' src='../assets/images/jobs/job2.jpg' alt='IMAGE 2'></div></div>"
   }
 ]
